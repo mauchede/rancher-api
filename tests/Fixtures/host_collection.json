@@ -1,0 +1,180 @@
+{
+  "type": "collection",
+  "resourceType": "host",
+  "links": {"self": "http://127.0.0.1:8080/v1/projects/1a5/hosts"},
+  "createTypes": {"cluster": "http://127.0.0.1:8080/v1/projects/1a5/clusters"},
+  "actions": {},
+  "data": [
+    {
+      "id": "1h1",
+      "type": "host",
+      "links": {
+        "self": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1",
+        "account": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/account",
+        "clusters": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/clusters",
+        "containerEvents": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/containerevents",
+        "hostLabels": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/hostlabels",
+        "instances": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/instances",
+        "ipAddresses": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/ipaddresses",
+        "loadBalancerHostMaps": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/loadbalancerhostmaps",
+        "loadBalancers": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/loadbalancers",
+        "physicalHost": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/physicalhost",
+        "serviceEvents": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/serviceevents",
+        "storagePools": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/storagepools",
+        "stats": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/stats",
+        "hostStats": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/hoststats",
+        "containerStats": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/containerstats"
+      },
+      "actions": {
+        "update": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/?action=update",
+        "deactivate": "http://127.0.0.1:8080/v1/projects/1a5/hosts/1h1/?action=deactivate"
+      },
+      "name": "localhost",
+      "state": "active",
+      "accountId": "1a5",
+      "agentState": "active",
+      "computeTotal": 1000000,
+      "created": "2015-10-25T18:31:23Z",
+      "createdTS": 1445797883000,
+      "description": "description localhost",
+      "info": {
+        "osInfo": {
+          "kernelVersion": "3.13.0-55-generic",
+          "operatingSystem": "Ubuntu 14.04.3 LTS",
+          "dockerVersion": "Docker version 1.7.1, build 786b29d"
+        },
+        "cpuInfo": {
+          "count": 1,
+          "cpuCoresPercentages": [2.472],
+          "loadAvg": [
+            0.04,
+            0.04,
+            0.05
+          ],
+          "mhz": 2394.46,
+          "modelName": "Intel Xeon E312xx (Sandy Bridge)"
+        },
+        "memoryInfo": {
+          "memTotal": 1954.012,
+          "swapTotal": 0.0,
+          "cached": 1262.555,
+          "swapCached": 0.0,
+          "swapFree": 0.0,
+          "memAvailable": null,
+          "memFree": 250.195,
+          "inactive": 801.977,
+          "active": 786.844,
+          "buffers": 218.809
+        },
+        "diskInfo": {
+          "mountPoints": {
+            "/dev/mapper/docker-253:1-132722-db974edb1b984696665d3f6aa969b4fc28dfe1d79a76ebd0cfba10c836c18ade": {
+              "total": 9951.305,
+              "free": 9522.445,
+              "used": 428.859,
+              "percentUsed": 4.31
+            },
+            "/dev/disk/by-uuid/ffa27525-e03c-46b6-9fdf-56f7ef6b5825": {
+              "total": 10046.305,
+              "free": 7271.074,
+              "used": 2775.23,
+              "percentUsed": 27.62
+            },
+            "/dev/mapper/docker-253:1-132722-ed4a99ad12d371b48f8ff4d3593f24ee340dd34ef63a665179176afa0787c213": {
+              "total": 9951.305,
+              "free": 9927.648,
+              "used": 23.656,
+              "percentUsed": 0.24
+            },
+            "/dev/mapper/docker-253:1-132722-ddeb67927910c71576f7e8fcc354b9f391f6b2b55558460673f3bfbc253ce49d": {
+              "total": 9951.305,
+              "free": 9606.289,
+              "used": 345.016,
+              "percentUsed": 3.47
+            },
+            "/dev/mapper/docker-253:1-132722-d979ce2b0ffe325bd8b0a8925313504d960c936fd0acb1c29496cd54149d1430": {
+              "total": 9951.305,
+              "free": 9784.703,
+              "used": 166.602,
+              "percentUsed": 1.67
+            }
+          },
+          "dockerStorageDriverStatus": {
+            "Data loop file": "/var/lib/docker/devicemapper/devicemapper/data",
+            "Library Version": "1.02.82-git (2013-10-04)",
+            "Metadata file": "/dev/loop1",
+            "Metadata loop file": "/var/lib/docker/devicemapper/devicemapper/metadata",
+            "Data Space Available": "7.624 GB",
+            "Pool Blocksize": "65.54 kB",
+            "Metadata Space Total": "2.147 GB",
+            "Pool Name": "docker-253:1-132722-pool",
+            "Data file": "/dev/loop0",
+            "Udev Sync Supported": "false",
+            "Data Space Used": "1.788 GB",
+            "Backing Filesystem": "extfs",
+            "Data Space Total": "107.4 GB",
+            "Metadata Space Available": "2.144 GB",
+            "Deferred Removal Enabled": "false",
+            "Metadata Space Used": "3.269 MB"
+          },
+          "dockerStorageDriver": "devicemapper",
+          "fileSystems": {"/dev/disk/by-uuid/ffa27525-e03c-46b6-9fdf-56f7ef6b5825": {"capacity": 10046.305}}
+        }
+      },
+      "kind": "docker",
+      "labels": {},
+      "physicalHostId": "1ph1",
+      "removed": null,
+      "transitioning": "no",
+      "transitioningMessage": null,
+      "transitioningProgress": null,
+      "uuid": "49d549a4-1171-4da4-9d83-b3c343c53322"
+    }
+  ],
+  "sortLinks": {
+    "accountId": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=accountId",
+    "agentState": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=agentState",
+    "computeFree": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=computeFree",
+    "computeTotal": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=computeTotal",
+    "created": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=created",
+    "description": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=description",
+    "id": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=id",
+    "isPublic": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=isPublic",
+    "kind": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=kind",
+    "name": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=name",
+    "physicalHostId": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=physicalHostId",
+    "removeTime": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=removeTime",
+    "removed": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=removed",
+    "state": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=state",
+    "uri": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=uri",
+    "uuid": "http://127.0.0.1:8080/v1/projects/1a5/hosts?sort=uuid"
+  },
+  "pagination": {
+    "first": null,
+    "previous": null,
+    "next": null,
+    "limit": 100,
+    "total": null,
+    "partial": false
+  },
+  "sort": null,
+  "filters": {
+    "accountId": null,
+    "agentState": null,
+    "computeFree": null,
+    "computeTotal": null,
+    "created": null,
+    "description": null,
+    "id": null,
+    "isPublic": null,
+    "kind": null,
+    "name": null,
+    "physicalHostId": null,
+    "removeTime": null,
+    "removed": null,
+    "state": null,
+    "uri": null,
+    "uuid": null
+  },
+  "createDefaults": {}
+}

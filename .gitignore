@@ -1,0 +1,7 @@
+bin/*
+!bin/extract-json
+!bin/test
+bootstrap.php
+composer.lock
+phpunit.xml
+vendor/*

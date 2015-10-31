@@ -1,0 +1,33 @@
+#!/bin/bash
+set -e
+cd "`dirname "$0"`/.."
+
+usage() {
+    echo "Usage: ACCESS_KEY='...' SECRET_KEY='...' $0 URL PATH" >&2
+    exit 1
+}
+
+[[ -z $ACCESS_KEY ]] && echo "ACCESS_KEY is missing." >&2 && usage
+[[ -z $SECRET_KEY ]] && echo "SECRET_KEY is missing." >&2 && usage
+[[ $# -ne 2 ]] && echo "Invalid number of arguments." >&2 && usage
+
+REQUEST_FILE=$(mktemp)
+STATUS=$(curl -s -u "$ACCESS_KEY:$SECRET_KEY" -H 'Accept: application/json' -H 'Content-Type: application/json' -X GET -d '{}' -o $REQUEST_FILE -w %{http_code} "$1")
+
+case $STATUS in
+    200)
+        mv $REQUEST_FILE $2
+        exit
+    ;;
+
+    401)
+        echo "Invalid credentials." >&2
+        exit 1
+    ;;
+
+
+    *)
+        echo "Bad response: $STATUS"
+        exit 1
+    ;;
+esac
