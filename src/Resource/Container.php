@@ -133,6 +133,16 @@ class Container extends AbstractResource
     }
 
     /**
+     * Determines if the console is in interactive mode.
+     *
+     * @return boolean
+     */
+    public function isStdinOpen()
+    {
+        return $this->stdinOpen;
+    }
+
+    /**
      * Determines if the container is stoppable.
      *
      * @return bool
@@ -140,6 +150,16 @@ class Container extends AbstractResource
     public function isStoppable()
     {
         return isset($this->actions['stop']);
+    }
+
+    /**
+     * Determines if the console is in TTY mode.
+     *
+     * @return boolean
+     */
+    public function isTty()
+    {
+        return $this->tty;
     }
 
     /**
