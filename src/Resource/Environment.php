@@ -28,6 +28,13 @@ class Environment extends AbstractResource
     private $name;
 
     /**
+     * @var string
+     *
+     * @Type("string")
+     */
+    private $dockerCompose;
+
+    /**
      * Gets the description.
      *
      * @return string
@@ -54,4 +61,26 @@ class Environment extends AbstractResource
     {
         return 'environment';
     }
+
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $name;
+    }
+
+    public function setDockerComposer($dockerCompose)
+    {
+        $this->dockerCompose = $dockerCompose;
+
+        return $this;
+    }
+
 }

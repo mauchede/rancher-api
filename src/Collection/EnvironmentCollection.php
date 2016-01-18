@@ -23,6 +23,21 @@ class EnvironmentCollection extends AbstractCollection
     private $data;
 
     /**
+     * Adds a new environment (aka stack)
+     *
+     * @param Environment $environment
+     * @param bool $startOnCreate
+     *
+     * @return $this
+     */
+    public function add(Environment $environment, $startOnCreate = true)
+    {
+        $this->client->post($this->getUri(), $environment, array('startOnCreate' => $startOnCreate));
+
+        return $this->reload();
+    }
+
+    /**
      * {@inheritdoc}
      *
      * @return Environment[]
