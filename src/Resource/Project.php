@@ -6,6 +6,7 @@ use JMS\Serializer\Annotation\Type;
 use Mauchede\RancherApi\Collection\ContainerCollection;
 use Mauchede\RancherApi\Collection\HostCollection;
 use Mauchede\RancherApi\Collection\ServiceCollection;
+use Mauchede\RancherApi\Collection\EnvironmentCollection;
 
 /**
  * Project represents a Rancher resource typed as "project".
@@ -76,6 +77,16 @@ class Project extends AbstractResource
     public function getServices()
     {
         return $this->client->get($this->links['services'], ServiceCollection::class);
+    }
+
+    /**
+     * Gets the environments.
+     *
+     * @return EnvironmentCollection
+     */
+    public function getEnvironments()
+    {
+        return $this->client->get($this->links['environments'], EnvironmentCollection::class);
     }
 
     /**
