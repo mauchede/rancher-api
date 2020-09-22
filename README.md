@@ -2,6 +2,8 @@
 
 Rancher API is a set of PHP classes for interacting with [Rancher](http://rancher.com/rancher/).
 
+⚠️ This project is no longer maintained. ⚠️
+
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/1f7de942-8900-4f1b-8840-013d2e62b8bc/big.png)](https://insight.sensiolabs.com/projects/1f7de942-8900-4f1b-8840-013d2e62b8bc)
 
 ## Installation
@@ -28,14 +30,6 @@ $containers = $project->getContainers();
 `endpoint` and the API Keys (`access_key` and `secret_key`) can be found in Rancher settings (`[Rancher URL]/settings/api`).
 
 __Note__: API keys are only available for ***one*** project/environment.
-
-## Contributing
-
-1. Fork it.
-2. Create your branch: `git checkout -b my-new-feature`.
-3. Commit your changes: `git commit -am 'Add some feature'`.
-4. Push to the branch: `git push origin my-new-feature`.
-5. Submit a pull request.
 
 ## Links
 
